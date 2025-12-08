@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright copyright--user">
+        <span>By <a href="https://github.com/23f2003968">Aadhirajan</a></span>
+      <span>&& <a href="https://github.com/Tharun-Kumar-A-01" target="_blank">Tharun Kumar</a></span>
+      </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
+
+{{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}
