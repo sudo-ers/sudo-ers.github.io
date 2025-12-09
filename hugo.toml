@@ -23,7 +23,7 @@ pagination.pagerSize = 5
 
     [languages.en.params.logo]
       logoText = "sudoers"
-      logoHomeLink = "https://sudo-ers.github.io/sudoers"
+      logoHomeLink = "https://sudo-ers.github.io/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
