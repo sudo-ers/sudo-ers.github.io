@@ -21,10 +21,9 @@
 				<ul class="menu menu--mobile">
 					<li class="menu__trigger">Menu&nbsp;▾</li>
 					<li>
-						<ul class="menu__dropdown" width="90px;">
-							<li><a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/blog">blog</a></li>
-							<hr/>
-							<li><a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/events">events</a></li>
+						<ul class="menu__dropdown" width="120px;">
+							<li style="color: var(--accent);display: flex;flex-direction: row;align-items: center;">./<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/blog">blog</a></li>
+							<li style="color: var(--accent);display: flex;flex-direction: row;align-items: center;">./<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/events">events</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -32,8 +31,8 @@
 			</div>
 			<nav class="navigation-menu">
 				<ul class="navigation-menu__inner menu--desktop">
-					<li><a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/blog">./blog</a></li>
-					<li><a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/events">./events</a></li>
+					<li style="color: var(--accent);">./<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/blog">blog</a></li>
+					<li style="color: var(--accent);">./<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}/events">events</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -554,7 +553,7 @@
 			}
 		}
 		.menu__dropdown {
-			width: 90px;
+			width: 120px;
 		}
 	</style>
 	<script>
