@@ -44,8 +44,8 @@
         </div>
 
         {{ if not .Params.showFullContent }}
-           <div>
-            <a class="read-more button inline" href="{{ .RelPermalink }}">[{{ $.Site.Params.ReadMore }}]</a>
+           <div >
+            <a class="read-more button inline" style="padding-top: 16px;" href="{{ .RelPermalink }}">[{{ $.Site.Params.ReadMore }}]</a>
           </div>
         {{ end }}
       </article>

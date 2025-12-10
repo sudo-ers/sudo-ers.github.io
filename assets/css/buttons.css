@@ -82,3 +82,7 @@ a.read-more:active {
   max-width: 100%;
   text-decoration: none;
 }
+
+.read-more {
+  align-self: center;
+}

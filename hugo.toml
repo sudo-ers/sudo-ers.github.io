@@ -13,9 +13,9 @@ pagination.pagerSize = 5
 
 [languages]
   [languages.en]
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
-    keywords = ""
+    title = "sudoers"
+    subtitle = "A Group of Hacktivists and Open Source Enthusiasts"
+    keywords = "sudoers, sudo-ers, community, tech community"
     copyright = ""
     menuMore = "Show more"
     readMore = "Read more"
@@ -27,10 +27,10 @@ pagination.pagerSize = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
         identifier = "blog"
-        name = "Blog"
+        name = "blog"
         url = "/blog/"
+      [[languages.en.menu.main]]
+        identifier = "events"
+        name = "events"
+        url = "/events/"
