@@ -34,3 +34,16 @@ pagination.pagerSize = 5
         identifier = "events"
         name = "events"
         url = "/events/"
+      [[languages.en.menu.main]]
+        identifier = "rss"
+        name = "rss"
+        url = "/blog/index.xml"
+      [[languages.en.menu.main]]
+        identifier = "back"
+        name = ".."
+        url = "../"
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

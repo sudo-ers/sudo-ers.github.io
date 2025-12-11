@@ -1,0 +1,35 @@
+<xml version="1.0" encoding="utf-8">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content">
+  <channel>
+    <title>{{ .Site.Title }} - {{ .Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Title }} posts on {{ .Site.Title }}</description>
+    <language>{{ .Site.LanguageCode }}</language>
+    {{ with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    {{ range .Pages }}
+    <item>
+      <title>{{ .Title | html }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+      {{ with .Params.author }}<author>{{ . }}</author>{{ end }}
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      {{ with .Params.tags }}
+        {{ range . }}
+      <category>{{ . }}</category>
+        {{ end }}
+      {{ end }}
+      {{ with .Params.cover }}
+        {{ $imgURL := . | absURL }}
+        <enclosure url="{{ $imgURL }}" length="0" type='{{ if or (strings.HasSuffix . ".jpg") (strings.HasSuffix . ".jpeg") }}image/jpeg{{ else if strings.HasSuffix . ".png" }}image/png{{ else }}image/jpeg{{ end }}' />
+      {{ end }}
+      <description>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Description }}</description>
+      <content:encoded>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Content }}</content:encoded>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
+</xml>
