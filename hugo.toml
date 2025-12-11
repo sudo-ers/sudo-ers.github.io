@@ -27,14 +27,6 @@ pagination.pagerSize = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "blog"
-        name = "blog"
-        url = "/blog/"
-      [[languages.en.menu.main]]
-        identifier = "events"
-        name = "events"
-        url = "/events/"
-      [[languages.en.menu.main]]
         identifier = "rss"
         name = "rss"
         url = "/blog/index.xml"

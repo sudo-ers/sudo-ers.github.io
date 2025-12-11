@@ -8,15 +8,15 @@
     {{ $css := resources.Match "css/*.css" }}
     {{ range $css }}
     {{ $styles := . | minify | fingerprint }}
-    <link rel="prefetch" href="{{ $styles.Permalink }}">
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
     {{ end }}
     <!-- Custom Terminal.css styles -->
     {{ if (fileExists "static/terminal.css") -}}
-    <link rel="prefetch" href="{{ "terminal.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "terminal.css" | absURL }}">
     {{- end }}
     <!-- Custom CSS to override theme properties (/static/style.css) -->
     {{ if (fileExists "static/style.css") -}}
-    <link rel="prefetch" href="{{ "style.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "style.css" | absURL }}">
     {{- end }}
 </head>
 
@@ -456,7 +456,7 @@
 		.container {
 			display: flex;
 			flex-direction: column;
-			padding: 40px;
+			padding: 20px;
 			width: 100%;
 			min-height: 100vh;
 			border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
