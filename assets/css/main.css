@@ -448,7 +448,7 @@ blockquote.twitter-tweet::before {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px;
   width: 100%;
   min-height: 100vh;
   border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);

@@ -5,6 +5,6 @@
   {{- with .Site.Params.dateFormat -}}
     {{- $date | time.Format . -}}
   {{- else -}}
-    {{- $date | time.Format "2006-01-02" -}}
+    {{- $date | time.Format "02 Jan 2006" -}}
   {{- end -}}
 {{- end -}}

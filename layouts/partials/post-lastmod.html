@@ -5,6 +5,6 @@
   {{- with .Site.Params.dateFormat -}}
     [{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format . -}}]
   {{- else -}}
-    [{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format "2006-01-02" -}}]
+    [{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format "02 Jan 2006" -}}]
   {{- end -}}
 {{- end -}}
