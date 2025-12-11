@@ -27,7 +27,7 @@
         <enclosure url="{{ $imgURL }}" length="0" type='{{ if or (strings.HasSuffix . ".jpg") (strings.HasSuffix . ".jpeg") }}image/jpeg{{ else if strings.HasSuffix . ".png" }}image/png{{ else }}image/jpeg{{ end }}' />
       {{ end }}
       <description>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Description }}</description>
-      <content:encoded>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Content }}</content:encoded>
+      <content>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Content }}</content>
     </item>
     {{ end }}
   </channel>
