@@ -2,12 +2,8 @@ languageCode = 'en-us'
 title = 'sudoers blog'
 pagination.pagerSize = 5
 
-[markup]
-    [markup.goldmark]
-        [markup.goldmark.extensions]
-            typographer = false
-        [markup.goldmark.renderer]
-            unsafe = true
+[markup.goldmark.renderer]
+    unsafe = true
 
 [params]
   contentTypeName = "posts"

@@ -1,35 +1,45 @@
-<xml version="1.0" encoding="utf-8">
-<rss version="2.0"
-     xmlns:atom="http://www.w3.org/2005/Atom"
-     xmlns:content="http://purl.org/rss/1.0/modules/content">
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<rss version="2.0" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+    xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Site.Title }} - {{ .Title }}</title>
+    <title>{{ printf "<![CDATA[%s - %s]]>" .Site.Title .Title | safeHTML }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{ .Title }} posts on {{ .Site.Title }}</description>
+    <description>{{ printf "<![CDATA[%s posts on %s]]>" .Title .Site.Title | safeHTML }}</description>
     <language>{{ .Site.LanguageCode }}</language>
+    
     {{ with .OutputFormats.Get "RSS" }}
-    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
+    
     {{ range .Pages }}
     <item>
-      <title>{{ .Title | html }}</title>
+      <title>{{ printf "<![CDATA[%s]]>" .Title | safeHTML }}</title>
       <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 IST" }}</pubDate>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
       {{ with .Params.author }}<author>{{ . }}</author>{{ end }}
       <guid isPermaLink="true">{{ .Permalink }}</guid>
+      
       {{ with .Params.tags }}
-        {{ range . }}
-      <category>{{ . }}</category>
-        {{ end }}
+        {{ range . }}<category>{{ . }}</category>{{ end }}
       {{ end }}
+      
       {{ with .Params.cover }}
         {{ $imgURL := . | absURL }}
         <enclosure url="{{ $imgURL }}" length="0" type='{{ if or (strings.HasSuffix . ".jpg") (strings.HasSuffix . ".jpeg") }}image/jpeg{{ else if strings.HasSuffix . ".png" }}image/png{{ else }}image/jpeg{{ end }}' />
       {{ end }}
-      <description>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Description }}</description>
-      <content>{{ with .Params.cover }}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{ end }}{{ .Content }}</content>
+      
+      <description>
+        {{- with .Params.cover -}}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{- end -}}
+        {{ printf "<![CDATA[%s]]>" .Description | safeHTML }}
+      </description>
+      
+      <content:encoded>
+        {{- with .Params.cover -}}<img src="{{ . | absURL }}" alt="Cover image for {{ $.Title }}" />{{- end -}}
+        {{ printf "<![CDATA[%s]]>" .Content | safeHTML }}
+      </content:encoded>
     </item>
     {{ end }}
   </channel>
 </rss>
-</xml>
