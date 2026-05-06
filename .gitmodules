@@ -1,0 +1,3 @@
+[submodule "themes/sudoers_theme"]
+	path = themes/sudoers_theme
+	url = https://git.sr.ht/~darth_vader/sudoers_theme

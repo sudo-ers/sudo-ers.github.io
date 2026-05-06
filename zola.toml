@@ -1,0 +1,85 @@
+# The URL the site will be built for
+base_url = "https://sudo-ers.github.com/blog"
+
+# The site title and description; used in feeds by default.
+title = "sudoers"
+description = "the sudoers blog"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+theme="sudoers_theme"
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+# The default author for pages
+author = "sudoer"
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+# Example:
+#     taxonomies = [
+#       {name = "tags", feed = true}, # each tag will have its own feed
+#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#       {name = "authors"}, # Basic definition: no feed or pagination
+#     ]
+#
+taxonomies = [
+    { name = "tags", feed = true },
+    { name = "categories", feed = true, paginate_by = 5 },
+]
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[markdown]
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = true
+
+# Whether footnotes are rendered in the GitHub-style (at the bottom, with back references) or plain (in the place, where they are defined)
+bottom_footnotes = true
+
+# When set to "true", support for GitHub-style alerts, a.k.a. callouts or admonitions, is enabled in the Markdown parser.
+github_alerts = true
+
+[markdown.highlighting]
+# Whether to use inline hex colours ("inline") or CSS classes ("class").
+# See https://www.getzola.org/documentation/content/syntax-highlighting/ for details.
+style = "inline"
+
+# The theme to use for code highlighting.
+# See https://github.com/getzola/giallo?tab=readme-ov-file#themes for the list of allowed values.
+light_theme = "catppuccin-latte"                                                                                     
+dark_theme = "catppuccin-mocha"
+
+[extra]
+close_responsive_menu_on_resize = true
+favicon_emoji = "~/"
+layout = "center"
+show_default_author = false
+
+main_menu = [
+    { name = "blog", url = "/blog", trailing_slash = true },
+    { name = "tags", url = "tags", trailing_slash = true },
+    { name = "rss", url = "rss.xml", trailing_slash = true },
+]
+
+socials = [
+    { name = "email", url = "mailto:tharunkumar8906@gmail.com" },
+    { name = "github", url = "https://github.com/sudo-ers" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/a-tharun-kumar" },
+    { name = "mastodon", url = "https://mastodon.social/@sudoers" },
+]
+
+[extra.content_security_policy]
+enable = true
+allowed_domains = [
+    { directive = "base-uri", domains = ["'self'"] },
+    { directive = "form-action", domains = ["'self'"] },
+]
+
+[extra.responsive_images]
+widths = [640, 784, 1280, 1920, 2560]
+fallback_width = 1280
