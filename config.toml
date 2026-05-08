@@ -1,9 +1,9 @@
 # The URL the site will be built for
-base_url = "https://sudo-ers.github.io/blog"
+base_url = "https://sudo-ers.github.io/"
 
 # The site title and description; used in feeds by default.
 title = "sudoers"
-description = "the sudoers blog"
+description = "the sudoers"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
