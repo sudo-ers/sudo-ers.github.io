@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Newsreader';
+    font-style: normal;
+    font-display: swap;
+    src: url('/blog/fonts/Newsreader.woff2') format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Newsreader';
+    font-style: italic;
+    font-display: swap;
+    src: url('/blog/fonts/Newsreader_Italic.woff2') format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/blog/fonts/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/blog/fonts/FiraCode-Bold.woff2') format('woff2');
+}
