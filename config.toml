@@ -55,7 +55,7 @@ light_theme = "catppuccin-latte"
 dark_theme = "catppuccin-mocha"
 
 [extra]
-logo_base_url = "https://sudo-ers.github.io/"
+logo_base_url = "/"
 
 close_responsive_menu_on_resize = true
 favicon_emoji = "~/"
