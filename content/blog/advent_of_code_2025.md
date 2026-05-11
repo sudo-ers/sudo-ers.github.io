@@ -1,6 +1,6 @@
 +++
 title = "Advent of Code 2025: The Tradition Continues"
-date = "2025-12-11"
+date = 2025-12-11
 authors = ["Aadhirajan", "Tharun Kumar"]
 description = "25 days to 12 days and No global leaderboard"
 +++

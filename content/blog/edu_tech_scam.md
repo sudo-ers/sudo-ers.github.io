@@ -1,8 +1,12 @@
 +++
 title = "Scam in the name of Internship"
-date = "2025-12-13"
+date = 2025-12-13
 authors = ["Tharun Kumar"]
 description = "In present Indian IT sector, Many Companies are scamming students in the name of internship or job offer. But it turns out to be a MLM scheme in a modern name where the primary source of their income is you."
+
+[taxonomies]
+tags = ["scam"]
+
 +++
 
 In present Indian IT sector, Many Companies are scamming students in the name of internship or job offer. But it turns out to be a MLM scheme in a modern name where the primary source of their income is you.
