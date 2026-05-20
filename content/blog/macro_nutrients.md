@@ -5,7 +5,7 @@ authors = ["Tharun Kumar"]
 description = ""
 
 [taxonomies]
-tags = ["#food","#unit2"]
+tags = ["food","unit2"]
 
 +++
 
