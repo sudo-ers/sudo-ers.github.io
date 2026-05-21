@@ -23,7 +23,19 @@ Microbial polysaccharides are classified based on where they are produced:
 * **Extracellular Polysaccharides (EPS):** Secreted outside the cell into the environment.
 	* Examples: Xanthan, Gellan.
 
-
+```
+               Microbial Polysaccharides
+                           |
+          +----------------+----------------+
+          |                                 |
+   Intracellular                    Extracellular (EPS)
+          |                                 |
+ Produced and stored                Secreted outside the cell 
+ inside the cell                    into the environment.
+          |                                 |
+ Example: Glycogen                  Examples: Xanthan, Gellan
+ (Acts as carbon/energy reserve)    (Creates protective capsules)
+```
 
 > [!TIP]
 > The syllabus text mentions "glycogen" as an intracellular reserve. However, the polysaccharides actually used in the food industry as thickeners and gelling agents are almost exclusively Extracellular Polysaccharides (EPS). Pointing this out in your exam shows a deeper understanding.
