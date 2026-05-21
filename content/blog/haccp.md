@@ -28,30 +28,22 @@ While formal HACCP has multiple steps, the provided text highlights the followin
 # HACCP Flow Diagram
 
 ```
-+----------------------------------+
-| Harvesting / Raw Material        |
-| Production                       |
-+----------------------------------+
-                |
-                v
-+----------------------------------+
-| Procurement & Handling           |
-+----------------------------------+
-                |
-                v
-+----------------------------------+
-| Manufacturing                    |
-+----------------------------------+
-                |
-                v
-+----------------------------------+
-| Distribution                     |
-+----------------------------------+
-                |
-                v
-+----------------------------------+
-| Consumption                      |
-+----------------------------------+
+[ 1. Raw Materials ] -> Procurement, Assessment, and Intake
+           |
+           v
+  [ 2. Hazard Analysis ] -> Identify Bio / Chem / Physical Risks
+           |
+           v
+  [ 3. CCP Assessment ] -> Pinpoint exact steps to apply controls
+           |               (e.g., Cooking, Metal Detection)
+           v
+  [ 4. Monitoring ] -> Real-time checks (Temperature, Time, pH)
+           |
+           v
+  [ 5. Verification ] -> Routine testing to ensure the system works
+           |
+           v
+  [ 6. Documentation ] -> Log all data, maintain legal safety records
 ```
 
 # Microbiological Criteria
